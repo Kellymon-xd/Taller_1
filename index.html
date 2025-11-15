@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas JS - Taller N1</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="main-header">
+    <h1>Taller N1 - Problemas JS</h1>
+</header>
+
+<!-- Contenedor donde se cargará el navbar -->
+<div id="navbar-container"></div>
+<!-- 
+<div id="navbar-container">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" onclick="showSection('problema1')">Problema 1</a></li>
+            <li><a href="#" onclick="showSection('problema2')">Problema 2</a></li>
+            <li><a href="#" onclick="showSection('problema3')">Problema 3</a></li>
+            <li><a href="#" onclick="showSection('problema4')">Problema 4</a></li>
+        </ul>
+    </nav>
+</div>
+-->
+
+<main class="container">
+
+    <!-- Problema 1 -->
+    <section id="problema1" class="hidden">
+        <h2>Problema 1: Costo de entrada al parque</h2>
+        <label>Ingresa tu edad:</label>
+        <input type="number" id="edad" min="0" max="110" oninput="this.value=this.value.replace(/^0+/,'')||0">
+        <button onclick="calcularEntrada()">Calcular costo</button>
+        <p id="resultado1"></p>
+    </section>
+
+    <!-- Problema 2 -->
+    <section id="problema2" class="hidden">
+        <h2>Problema 2: Categoría del empleado</h2>
+        <label>Ingresa tu código de 3 cifras:</label>
+        <input type="text" id="codigo" maxlength="3">
+        <button onclick="categoriaEmpleado()">Ver categoría</button>
+        <p id="resultado2"></p>
+    </section>
+
+    <!-- Problema 3 -->
+    <section id="problema3" class="hidden">
+        <h2>Problema 3: Pendiente de una recta</h2>
+        <label>Punto 1 (x1, y1):</label><br>
+        <input type="number" id="x1" placeholder="x1">
+        <input type="number" id="y1" placeholder="y1"><br>
+        <label>Punto 2 (x2, y2):</label><br>
+        <input type="number" id="x2" placeholder="x2">
+        <input type="number" id="y2" placeholder="y2"><br>
+        <button onclick="calcularPendiente()">Calcular pendiente</button>
+        <p id="resultado3"></p>
+    </section>
+
+    <!-- Problema 4 -->
+    <section id="problema4" class="hidden">
+        <h2>Problema 4: Estado del clima</h2>
+        <label>Temperatura (°C):</label>
+        <input type="number" id="temperatura"><br>
+        <label>Humedad relativa (%):</label>
+        <input type="number" id="humedad"><br>
+        <button onclick="estadoClima()">Ver estado del clima</button>
+        <p id="resultado4"></p>
+    </section>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
