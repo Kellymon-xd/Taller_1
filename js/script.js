@@ -13,7 +13,7 @@ function showSection(id) {
 // Problema 1
 function calcularEntrada() {
     const edad = parseInt(document.getElementById('edad').value);
-    if (isNaN(edad) || edad < 0 || edad > 110) {
+    if (isNaN(edad) || edad <= 0 || edad > 110) {
         document.getElementById('resultado1').innerText = "Ingresa una edad válida (0-110)";
         return;
     }
